@@ -23,22 +23,30 @@ export default function ContentTable({
           A list of your recent invoices.
         </TableCaption>
         <TableHeader>
-          <TableRow>
-            <TableHead className="w-[200px] ">Functionality</TableHead>
-            <TableHead>JavaScript</TableHead>
-            <TableHead>Python</TableHead>
-            <TableHead className="text-right">Short Description</TableHead>
+          <TableRow className="bg-slate-900 ">
+            <TableHead className="w-[200px] border ">Functionality</TableHead>
+            <TableHead className="border">JavaScript</TableHead>
+            <TableHead className="border">Python</TableHead>
+            <TableHead className="text-right border">
+              Short Description
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {programApi.map((item) => (
             <TableRow key={item.id}>
-              <TableCell className="font-medium">
+              <TableCell className="font-medium py-3 border">
                 {item.functionality}
               </TableCell>
-              <TableCell>{item.javascript}</TableCell>
-              <TableCell>{item.python}</TableCell>
-              <TableCell className="text-right">{item.description}</TableCell>
+              <TableCell className="text-yellow-400 py-3 border">
+                {item.javascript}
+              </TableCell>
+              <TableCell className="text-green-500 py-3 border">
+                {item.python}
+              </TableCell>
+              <TableCell className="text-right py-3 border">
+                {item.description}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
