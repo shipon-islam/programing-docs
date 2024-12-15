@@ -1,45 +1,41 @@
-import ContentTable from "@/components/ContentTable";
-import {
-  advancedFeatures,
-  arrayListOperations,
-  objectOperations,
-  stringOperations,
-  timersAndScheduling,
-} from "@/constant/programe";
+import Image from "next/image";
 
-export default function Home() {
+function Home() {
   return (
-    <main className="wrapper">
-      <div>
-        <h1 className="text-4xl font-semibold">
-          Comparison Between JavaScript and Python
-        </h1>
-        <p className="my-8">
-          This document provides a comprehensive comparison between JavaScript
-          and Python functionalities, methods, and advanced features.
-        </p>
-      </div>
-      <hr />
-      <ContentTable
-        tittle="1.string operations"
-        programApi={stringOperations}
-      />
-      <ContentTable
-        tittle="2. Array/List Operations"
-        programApi={arrayListOperations}
-      />
-      <ContentTable
-        tittle="3. Object/Dictionary Operations"
-        programApi={objectOperations}
-      />
-      <ContentTable
-        tittle="4. Timers and Scheduling"
-        programApi={timersAndScheduling}
-      />
-      <ContentTable
-        tittle="5. Advanced Features"
-        programApi={advancedFeatures}
-      />
+    <main>
+      <section className="text-gray-600 body-font">
+        <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+          <Image
+            className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+            alt="hero"
+            src="/hero.jpg"
+            width={720}
+            height={600}
+          />
+          <div className="text-center lg:w-2/3 w-full">
+            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
+              Microdosing synth tattooed vexillologist
+            </h1>
+            <p className="mb-8 leading-relaxed">
+              Meggings kinfolk echo park stumptown DIY, kale chips beard
+              jianbing tousled. Chambray dreamcatcher trust fund, kitsch vice
+              godard disrupt ramps hexagon mustache umami snackwave tilde
+              chillwave ugh. Pour-over meditation PBR&B pickled ennui celiac
+              mlkshk freegan photo booth af fingerstache pitchfork.
+            </p>
+            <div className="flex justify-center">
+              <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                Button
+              </button>
+              <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+                Button
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
+
+export default Home;
