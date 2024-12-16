@@ -7,11 +7,11 @@ import { useState } from "react";
 function Header() {
   const [isMenu, setIsMenu] = useState<boolean>(false);
   return (
-    <header className="sticky top-0 right-0">
+    <header className="sticky top-0 right-0 z-50">
       <nav className="bg-white dark:bg-slate-900 w-full start-0 border-b border-slate-200 dark:border-slate-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
-            href="https://flowbite.com/"
+            href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <Image

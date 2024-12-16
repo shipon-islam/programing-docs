@@ -78,4 +78,10 @@ body {
   .dropdown-menu:hover .dropdown-list {
     @apply block;
   }
+  .scrollbar-thin::-webkit-scrollbar {
+    @apply w-[1px];
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    @apply bg-gray-800 rounded-md;
+  }
 }
