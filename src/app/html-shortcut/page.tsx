@@ -31,7 +31,7 @@ export default function HTML_Shorhand() {
                 {item.shorthand}
               </TableCell>
               <TableCell className="text-yellow-400  border">
-                <CodeBlock mt="mt-" language="python">
+                <CodeBlock threeDot={false} mt="mt-" language="python">
                   {item.output}
                 </CodeBlock>
               </TableCell>

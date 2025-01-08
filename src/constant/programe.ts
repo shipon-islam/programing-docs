@@ -544,3 +544,144 @@ export const htmlShorthands = [
 </section>`,
   },
 ];
+export const gitCommands = [
+  {
+    category: "Configuration",
+    command: "git config --list",
+    response: "Displays a list of current Git configurations.",
+  },
+  {
+    category: "Repository Initialization",
+    command: "git init",
+    response: "Initializes an empty Git repository in the current directory.",
+  },
+  {
+    category: "Cloning",
+    command: "git clone <url>",
+    response: "Clones a remote repository to your local machine.",
+  },
+  {
+    category: "Status and Info",
+    command: "git status",
+    response: "Shows the status of your working directory and staging area.",
+  },
+  {
+    category: "Status and Info",
+    command: "git log",
+    response: "Displays the commit history.",
+  },
+  {
+    category: "Status and Info",
+    command: "git log --oneline",
+    response: "Displays a summarized commit history (one line per commit).",
+  },
+  {
+    category: "Adding and Committing",
+    command: "git add <file>",
+    response: "Stages a file for the next commit.",
+  },
+  {
+    category: "Adding and Committing",
+    command: 'git commit -m "message"',
+    response: "Records changes to the repository with a message.",
+  },
+  {
+    category: "Branching",
+    command: "git branch",
+    response: "Lists all branches in the repository.",
+  },
+  {
+    category: "Branching",
+    command: "git branch <branch_name>",
+    response: "Creates a new branch.",
+  },
+  {
+    category: "Branching",
+    command: "git checkout <branch>",
+    response: "Switches to the specified branch.",
+  },
+  {
+    category: "Branching",
+    command: "git checkout -b <branch>",
+    response: "Creates and switches to a new branch.",
+  },
+  {
+    category: "Pushing and Pulling",
+    command: "git push",
+    response: "Pushes local changes to the remote repository.",
+  },
+  {
+    category: "Pushing and Pulling",
+    command: "git pull",
+    response:
+      "Fetches and merges changes from the remote repository into the current branch.",
+  },
+  {
+    category: "Stashing",
+    command: "git stash",
+    response: "Saves changes temporarily without committing.",
+  },
+  {
+    category: "Stashing",
+    command: "git stash list",
+    response: "Lists all stashed changes.",
+  },
+  {
+    category: "Merging",
+    command: "git merge <branch_name>",
+    response:
+      "Merges changes from the specified branch into the current branch.",
+  },
+  {
+    category: "Tags",
+    command: "git tag",
+    response: "Lists all tags in the repository.",
+  },
+  {
+    category: "Undoing Changes",
+    command: "git restore <file>",
+    response: "Discards changes in a file (unstaged changes only).",
+  },
+  {
+    category: "Undoing Changes",
+    command: "git reset --hard",
+    response:
+      "Resets the repository to a previous commit, discarding all changes.",
+  },
+  {
+    category: "Remote",
+    command: "git remote -v",
+    response: "Lists the URLs of remote repositories.",
+  },
+  {
+    category: "Remote",
+    command: "git fetch",
+    response:
+      "Downloads changes from the remote repository without merging them.",
+  },
+  {
+    category: "Rewriting History",
+    command: "git commit --amend",
+    response: "Amends the last commit (message or staged changes).",
+  },
+  {
+    category: "Inspecting",
+    command: "git reflog",
+    response: "Displays a log of all changes made to the tips of branches.",
+  },
+  {
+    category: "Cherry-Picking",
+    command: "git cherry-pick <hash>",
+    response: "Applies a specific commit to the current branch.",
+  },
+  {
+    category: "Clean-up",
+    command: "git clean -f",
+    response: "Removes untracked files from the working directory.",
+  },
+  {
+    category: "Help",
+    command: "git help",
+    response: "Displays help information for Git commands.",
+  },
+];

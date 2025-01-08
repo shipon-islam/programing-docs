@@ -12,8 +12,15 @@ type Tcodeblock = {
   children: ReactNode;
   title?: string;
   mt?: string;
+  threeDot?: boolean;
 };
-const CodeBlock = ({ language, children, title, mt = "mt-6" }: Tcodeblock) => {
+const CodeBlock = ({
+  language,
+  children,
+  title,
+  mt = "mt-6",
+  threeDot = true,
+}: Tcodeblock) => {
   useEffect(() => {
     hljs.highlightAll();
   }, []);
@@ -21,11 +28,14 @@ const CodeBlock = ({ language, children, title, mt = "mt-6" }: Tcodeblock) => {
   return (
     <div>
       <h3 className={`text-sm pl-2  capitalize py-1 ${mt}`}>{title}</h3>
-      <div className="bg-slate-900 pt-2 pl-3 rounded-t-xl">
-        <span className="bg-red-500 w-3 h-3 inline-block mx-1 rounded-full"></span>
-        <span className="bg-orange-400 w-3 h-3 inline-block mx-1 rounded-full"></span>
-        <span className="bg-green-400 w-3 h-3 inline-block mx-1 rounded-full"></span>
-      </div>
+      {threeDot && (
+        <div className="bg-slate-900 pt-2 pl-3 rounded-t-xl">
+          <span className="bg-red-500 w-3 h-3 inline-block mx-1 rounded-full"></span>
+          <span className="bg-orange-400 w-3 h-3 inline-block mx-1 rounded-full"></span>
+          <span className="bg-green-400 w-3 h-3 inline-block mx-1 rounded-full"></span>
+        </div>
+      )}
+
       <pre>
         <code className={language}>{children}</code>
       </pre>
