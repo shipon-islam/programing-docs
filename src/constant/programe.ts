@@ -433,3 +433,114 @@ export const advancedFeatures = [
     description: "Run code in parallel.",
   },
 ];
+export const htmlShorthands = [
+  {
+    shorthand: "!",
+    description: "Basic HTML boilerplate",
+    output: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+</body>
+</html>`,
+  },
+  {
+    shorthand: "div",
+    description: "Single div element",
+    output: "<div></div>",
+  },
+  {
+    shorthand: ".class-name",
+    description: "Div with a class",
+    output: '<div class="class-name"></div>',
+  },
+  {
+    shorthand: "#id-name",
+    description: "Div with an ID",
+    output: '<div id="id-name"></div>',
+  },
+  {
+    shorthand: "ul>li*3",
+    description: "Unordered list with 3 items",
+    output: `
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>`,
+  },
+  {
+    shorthand: "table>tr*2>td*3",
+    description: "Table with 2 rows and 3 columns",
+    output: `
+<table>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>`,
+  },
+  {
+    shorthand: "form>input+button",
+    description: "Form with input and button",
+    output: `
+<form>
+  <input type="text">
+  <button></button>
+</form>`,
+  },
+  {
+    shorthand: "a[href='#']",
+    description: "Anchor link",
+    output: '<a href="#"></a>',
+  },
+  {
+    shorthand: "img[src='image.jpg' alt='']",
+    description: "Image with source and alt attribute",
+    output: '<img src="image.jpg" alt="">',
+  },
+  {
+    shorthand: "header>nav>ul>li*3>a[href='#']",
+    description: "Header with navigation links",
+    output: `
+<header>
+  <nav>
+    <ul>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+  </nav>
+</header>`,
+  },
+  {
+    shorthand: ".container>.item*3",
+    description: "Div with 3 child divs",
+    output: `
+<div class="container">
+  <div class="item"></div>
+  <div class="item"></div>
+  <div class="item"></div>
+</div>`,
+  },
+  {
+    shorthand: "section>h1+p",
+    description: "Section with an h1 and a paragraph",
+    output: `
+<section>
+  <h1></h1>
+  <p></p>
+</section>`,
+  },
+];

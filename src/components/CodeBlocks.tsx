@@ -11,15 +11,16 @@ type Tcodeblock = {
   language: string;
   children: ReactNode;
   title?: string;
+  mt?: string;
 };
-const CodeBlock = ({ language, children, title }: Tcodeblock) => {
+const CodeBlock = ({ language, children, title, mt = "mt-6" }: Tcodeblock) => {
   useEffect(() => {
     hljs.highlightAll();
   }, []);
 
   return (
     <div>
-      <h3 className="text-sm pl-2 mt-6 capitalize py-1">{title}</h3>
+      <h3 className={`text-sm pl-2  capitalize py-1 ${mt}`}>{title}</h3>
       <div className="bg-slate-900 pt-2 pl-3 rounded-t-xl">
         <span className="bg-red-500 w-3 h-3 inline-block mx-1 rounded-full"></span>
         <span className="bg-orange-400 w-3 h-3 inline-block mx-1 rounded-full"></span>
