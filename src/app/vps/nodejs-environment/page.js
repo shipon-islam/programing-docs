@@ -4,7 +4,7 @@ export default function NodeEnvironment() {
     <main className="wrapper">
       <section>
         <p className="text-xl font-bold">
-          Here's a step-by-step guide to set up a VPS for a Node.js application
+          Here is a step-by-step guide to set up a VPS for a Node.js application
           with Node.js, Git, Nginx, PM2, and firewall configuration. I’ll assume
           you’re using an Ubuntu VPS (common for hosting).
         </p>
@@ -253,7 +253,7 @@ sudo ufw status
         </div>
         <div className="mt-8">
           <h5 className="font-bold text-blue-500 capitalize">
-            11. Set up SSL with Let's Encrypt (optional):
+            11. Set up SSL with Lets Encrypt (optional):
           </h5>
           <CodeBlock
             title="replace 'example.com with your actual domain':"
