@@ -1,3 +1,84 @@
+export const ubuntuCommands = [
+  // 📂 Folder Commands
+  { category: "Folder", action: "Create folder", command: "mkdir myfolder" },
+  {
+    category: "Folder",
+    action: "Create nested folders",
+    command: "mkdir -p projects/2025/app",
+  },
+  { category: "Folder", action: "List folders/files", command: "ls" },
+  { category: "Folder", action: "List with details", command: "ls -l" },
+  {
+    category: "Folder",
+    action: "Remove empty folder",
+    command: "rmdir myfolder",
+  },
+  {
+    category: "Folder",
+    action: "Remove folder with files",
+    command: "rm -r myfolder",
+  },
+
+  // 📄 File Commands
+  { category: "File", action: "Create empty file", command: "touch file.txt" },
+  { category: "File", action: "Read file (print)", command: "cat file.txt" },
+  {
+    category: "File",
+    action: "Read file (page by page)",
+    command: "less file.txt",
+  },
+  {
+    category: "File",
+    action: "Write text (overwrite)",
+    command: 'echo "Hello World" > file.txt',
+  },
+  {
+    category: "File",
+    action: "Append text",
+    command: 'echo "Another line" >> file.txt',
+  },
+  {
+    category: "File",
+    action: "Edit file in nano editor",
+    command: "nano file.txt",
+  },
+
+  // 🔄 Copy / Move / Rename
+  {
+    category: "Copy/Move",
+    action: "Copy file",
+    command: "cp file.txt backup.txt",
+  },
+  {
+    category: "Copy/Move",
+    action: "Copy folder",
+    command: "cp -r myfolder backupfolder",
+  },
+  {
+    category: "Copy/Move",
+    action: "Move or rename file",
+    command: "mv file.txt newname.txt",
+  },
+  {
+    category: "Copy/Move",
+    action: "Move file to another folder",
+    command: "mv file.txt /home/user/Documents/",
+  },
+
+  // ❌ Delete
+  { category: "Delete", action: "Delete file", command: "rm file.txt" },
+  {
+    category: "Delete",
+    action: "Delete multiple files",
+    command: "rm file1.txt file2.txt",
+  },
+  {
+    category: "Delete",
+    action: "Delete with confirmation",
+    command: "rm -i file.txt",
+  },
+];
+
 export const stringOperations = [
   {
     id: 1,
