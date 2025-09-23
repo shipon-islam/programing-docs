@@ -111,12 +111,18 @@ sudo env PATH=$PATH:/usr/bin pm2 startup systemd -u $USER --hp /home/$USER
           </div>
 
           <div className="mt-4">
-            <h1>7.2 Show all running apps</h1>
+            <h1>7.2 Start project with pm2</h1>
             <CodeBlock
               title="Command:"
               language="javascript"
             >{`pm2 start npm --name app-name -- start
 pm2 save
+
+`}</CodeBlock>
+            <CodeBlock
+              title="one more way:"
+              language="javascript"
+            >{`pm2 start "npm run start" --name "project name" --cwd /var/www/project-name
 
 `}</CodeBlock>
           </div>
@@ -185,7 +191,7 @@ sudo systemctl enable nginx
           <CodeBlock
             title="create file and open just one command:"
             language="javascript"
-          >{`sudo nano /etc/nginx/sites-available/royalsafari.conf
+          >{`sudo nano /etc/nginx/sites-available/domain-name.conf
 
 `}</CodeBlock>
           <CodeBlock
